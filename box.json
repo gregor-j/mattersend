@@ -1,0 +1,24 @@
+{
+  "chmod": "0755",
+  "directories": ["src"],
+  "finder": [
+    {
+      "name": "*.php",
+      "exclude": [
+        "Tests",
+        "tests",
+        "composer.*",
+        ".gitignore",
+        "README.md",
+        "CHANGELOG.md",
+        "LICENSE*",
+        "phpunit.xml*"
+      ],
+      "in": "vendor"
+    }
+  ],
+  "compactors": "Herrera\\Box\\Compactor\\Php",
+  "main": "bin/mattersend",
+  "output": "mattersend.phar",
+  "stub": true
+}

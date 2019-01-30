@@ -1,0 +1,28 @@
+{
+    "name": "gregorj/mattersend",
+    "description": "Send messages from cli to Mattermost via webhooks.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gregor J.",
+            "role": "developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5.0",
+        "ext-json": "*",
+        "symfony/console": "^3.4",
+        "thibaud-dauce/mattermost-php": "^1.2",
+        "symfony/finder": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "GregorJ\\Mattersend\\": "src"
+        }
+    },
+    "bin": [
+        "bin/mattersend"
+    ]
+}

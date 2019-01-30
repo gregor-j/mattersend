@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+/**
+ * File bin/mattersend
+ *
+ * Mattersend executable file.
+ *
+ * @package mattersend
+ * @author  Gregor J.
+ * @license MIT
+ */
+
+$autoloader = DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+$appDir = dirname(__DIR__);
+if (!file_exists($appDir.$autoloader)) {
+    $appDir = getcwd();
+}
+require_once $appDir.$autoloader;
+
+$app = new \Symfony\Component\Console\Application('Mattersend', '1.0.10');
+$app->add(new \GregorJ\Mattersend\Commands\Send('send'));
+$app->add(new \GregorJ\Mattersend\Commands\MonitorNotification('notify'));
+$app->add(new \GregorJ\Mattersend\Commands\AvatarImages('images'));
+$app->add(new \GregorJ\Mattersend\Commands\AvatarSearch('avatar-search'));
+$app->run();
