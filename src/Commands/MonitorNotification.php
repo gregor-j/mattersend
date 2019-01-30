@@ -149,7 +149,7 @@ class MonitorNotification extends Command
      */
     private function getAvatarsFile(InputInterface $input)
     {
-        if ($input->hasOption('avatars-file') && $input->getOption('avatars-file') !== null) {
+        if ($input->getOption('avatars-file') !== null) {
             return $input->getOption('avatars-file');
         }
         return getenv('MATTERSEND_AVATARS', true);
