@@ -45,21 +45,21 @@ class MonitorNotification extends Command
             ->addOption(
                 'avatar',
                 'a',
-                InputOption::VALUE_OPTIONAL,
+                InputOption::VALUE_REQUIRED,
                 'Sender avatar of the Mattermost notification.',
                 'robot'
             )
             ->addOption(
                 'sender',
                 's',
-                InputOption::VALUE_OPTIONAL,
+                InputOption::VALUE_REQUIRED,
                 'Sender name of the Mattermost notifictation.',
                 'Monitor'
             )
             ->addOption(
                 'channel',
                 'c',
-                InputOption::VALUE_OPTIONAL,
+                InputOption::VALUE_REQUIRED,
                 'Name of the channel to send the message to. @username are channels too.'
             )
             ->addOption(
@@ -71,14 +71,14 @@ class MonitorNotification extends Command
             ->addOption(
                 'webhook',
                 null,
-                InputOption::VALUE_OPTIONAL,
+                InputOption::VALUE_REQUIRED,
                 'Mattermost webhook to send the message to.'
                 .' Alternatively the environment variable MATTERSEND_WEBHOOK will be used.'
             )
             ->addOption(
                 'avatars-file',
                 null,
-                InputOption::VALUE_OPTIONAL,
+                InputOption::VALUE_REQUIRED,
                 'JSON file containing avatars.'
                 .' Alternatively the environment variable MATTERSEND_AVATARS will be used.'
             )

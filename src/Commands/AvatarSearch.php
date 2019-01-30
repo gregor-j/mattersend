@@ -32,7 +32,7 @@ class AvatarSearch extends Command
             ->addOption(
                 'avatars-file',
                 null,
-                InputOption::VALUE_OPTIONAL,
+                InputOption::VALUE_REQUIRED,
                 'JSON file containing avatars.'
                 .' Alternatively the environment variable MATTERSEND_AVATARS will be used.'
             )
