@@ -121,7 +121,7 @@ class AvatarImages extends Command
      */
     private function formatUrl(SplFileInfo $file, $prefix)
     {
-        return sprintf('%s%s', $prefix, urlencode($file->getFilename()));
+        return sprintf('%s%s', $prefix, $file->getFilename());
     }
 
     /**
