@@ -17,9 +17,9 @@ if (!file_exists($appDir.$autoloader)) {
 }
 require_once $appDir.$autoloader;
 
-$app = new \Symfony\Component\Console\Application('Mattersend', '1.0.10');
+$app = new \Symfony\Component\Console\Application('Mattersend', '1.0.0');
 $app->add(new \GregorJ\Mattersend\Commands\Send('send'));
 $app->add(new \GregorJ\Mattersend\Commands\MonitorNotification('notify'));
 $app->add(new \GregorJ\Mattersend\Commands\AvatarImages('images'));
-$app->add(new \GregorJ\Mattersend\Commands\AvatarSearch('avatar-search'));
+$app->add(new \GregorJ\Mattersend\Commands\AvatarSearch('search'));
 $app->run();

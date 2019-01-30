@@ -27,8 +27,7 @@ class AvatarImages extends Command
     protected function configure()
     {
         $this
-            ->setDescription('Compile a list of available images.')
-            ->setHelp('Compile a list of available images.')
+            ->setDescription('Create a JSON of custom avatars from files in a directory.')
             ->addArgument(
                 'source',
                 InputArgument::REQUIRED,
@@ -42,7 +41,7 @@ class AvatarImages extends Command
             ->addOption(
                 'path-prefix',
                 'p',
-                InputOption::VALUE_OPTIONAL,
+                InputOption::VALUE_REQUIRED,
                 'Prefix to the file path found.'
             )
         ;

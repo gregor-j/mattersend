@@ -23,8 +23,7 @@ class AvatarSearch extends Command
     protected function configure()
     {
         $this
-            ->setDescription('Search for an avatar.')
-            ->setHelp($this->getDescription())
+            ->setDescription('Search for a custom avatar by avatar name.')
             ->addArgument(
                 'name',
                 InputArgument::REQUIRED,

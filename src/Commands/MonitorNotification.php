@@ -32,7 +32,6 @@ class MonitorNotification extends Command
             ->setDescription(
                 'Send monitor notifications to Mattermost.'
             )
-            ->setHelp($this->getDescription())
             ->addArgument(
                 'host',
                 InputArgument::REQUIRED,

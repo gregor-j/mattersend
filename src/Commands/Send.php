@@ -38,9 +38,8 @@ class Send extends Command
     {
         $this
             ->setDescription(
-                'Sends messages to mattersend using webhooks.'
+                'Send messages to mattersend using webhooks.'
             )
-            ->setHelp($this->getDescription())
             ->addArgument(
                 'message',
                 InputArgument::REQUIRED,
