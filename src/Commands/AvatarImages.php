@@ -122,17 +122,14 @@ class AvatarImages extends Command
      */
     private function formatUrl(SplFileInfo $file, $prefix)
     {
-        return sprintf(
-            '%s%s',
-            $prefix,
-            str_replace(getcwd().DIRECTORY_SEPARATOR, '', $file->getRealPath())
-        );
+        return sprintf('%s%s', $prefix, $file->getFilename());
     }
 
     /**
      * Get the prefix for the image file path.
      * @param \Symfony\Component\Console\Input\InputInterface $input
      * @return string
+     * @throws \Symfony\Component\Console\Exception\InvalidArgumentException
      */
     private function getPathPrefix(InputInterface $input)
     {
