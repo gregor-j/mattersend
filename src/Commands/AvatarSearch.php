@@ -60,7 +60,12 @@ class AvatarSearch extends Command
             /**
              * @var \GregorJ\Mattersend\Avatar $avatar
              */
-            $output->writeln(sprintf('<comment>%s</comment>: %s', $avatar->getDisplayName(), $avatar->getName()));
+            $output->writeln(sprintf(
+                '<comment>%s</comment>: %s - "<info>%s</info>"',
+                $avatar->getDisplayName(),
+                $avatar->getName(),
+                $avatar->getImageUrl()
+            ));
         }
         return 0;
     }
